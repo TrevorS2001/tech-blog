@@ -1,0 +1,28 @@
+<article>
+    <section>
+        <div>
+            <h2>
+                Edit Post
+            </h2>
+        </div>
+        <div>
+            <form>
+                <div>
+                    <label for="post-title">Title</label>
+                    <input type="text" name="post-title" id="post-title" value="{{post.title}}" />
+                </div>
+                <div>
+                    <label for="post-content">Content</label>
+                    <textarea id="post-content" name="post-content">{{post.content}}</textarea>
+                </div>
+                <button type="submit">Update post</button>
+                <button type="button">Delete post</button>
+            </form>
+        </div>
+    </section>
+</article>
+
+{{#if loggedIn}}
+<script src="../public/javascript/edit-post.js"></script>
+<script src="../public/javascript/delete-post.js"></script>
+{{/if}}
